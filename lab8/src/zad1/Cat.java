@@ -1,0 +1,18 @@
+package zad1;
+
+public class Cat extends Animal implements LoudAnimal{
+
+    public Cat(String name) {
+        super(name);
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println("Miau Miau");
+    }
+
+    @Override
+    public void sayName() {
+        System.out.println(this.name);
+    }
+}
