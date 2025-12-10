@@ -21,7 +21,7 @@ public class Product {
     }
 
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Product p1=new Product(1,"Maskotka",20.5);
         Product p2=new Product(2,"Maskotka",12.5);
         Product p3=new Product(3,"Maskotka",12.5);

@@ -20,7 +20,7 @@ public class Person {
         return this.lastName + " " + this.firstName;
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Person p1=new Person("Marian","Gładek",LocalDate.of(2005,3,12));
         Person p2=new Person("Dawid","Gładek",LocalDate.of(2005,3,12));
         Person p3=new Person("Dawid","Nowak",LocalDate.of(2005,3,12));

@@ -1,6 +1,5 @@
 package zad6;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -20,7 +19,7 @@ public class Song {
         return this.title + " " + this.artist + " " + this.duration;
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Song[] piosenki=new Song[5];
         piosenki[0]=new Song("Radzik","Tadzik",160);
         piosenki[1]=new Song("Radzik","Tadzik",120);

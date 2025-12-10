@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Student implements Comparable<Student> {
+public class Student implements Comparable<Student>, Cloneable {
     String imie;
     double sredniaOcen;
     int rokUrodzenia;
@@ -38,8 +38,24 @@ public class Student implements Comparable<Student> {
         System.out.println(studenci);
         studenci.sort(new YearofBirthStudentComparator());
         System.out.println(studenci);
+        Student student1=new Student("Adam",4.0,2001);
+        Student student2=student1.clone();
+        student1.sredniaOcen=4.5;
+        System.out.println(student1);
+        System.out.println(student2);
     }
 
+
+    @Override
+    public Student clone() {
+        try {
+            Student clone = (Student) super.clone();
+            // TODO: copy mutable state here, so the clone can't change the internals of the original
+            return clone;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
+    }
 }
 class AvgGradeStudentComparator implements Comparator<Student>{
 
